@@ -1,7 +1,27 @@
+import { yupResolver } from '@hookform/resolvers/yup'
 import { useForm } from 'react-hook-form'
+import * as yup from "yup";
+
+const schema = yup.onject({
+  username: yup
+    .string()
+    .required('El nombre es obligatorio'),
+  password: yup
+    .string()
+    .min(6, 'La contraseña debe tener al menos 6 caracteres')
+    required('La contraseña es obligatoria'),
+  confirmPassword: yup
+    .string()
+    .oneOf([yup.ref('password')], 'Las contraseñas no coinciden.')  // (a quein hago referencia, error)
+    required('Confirma tu contraseña'),
+})
 
 export const BasicForm = () => {
-  const { register, handleSubmit } = useForm()
+  const {
+    register,
+    handleSubmit
+    formSate: { errors, isValid }
+  } = useForm()
 
   const onSubmit = (data) => { /* Manejar data */
     console.log(data)
