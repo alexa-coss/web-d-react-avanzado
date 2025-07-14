@@ -12,7 +12,7 @@ const schema = yup.object({
     .required('La contraseña es obligatoria'),
   confirmPassword: yup
     .string()
-    .oneOf([yup.ref('password')], 'Las contraseñas no coinciden.')  // (a quein hago referencia, error)
+    .oneOf([yup.ref('password')], 'Las contraseñas no coinciden.')  // (a quien hago referencia, error)
     .required('Confirma tu contraseña'),
 })
 
@@ -58,6 +58,7 @@ export const BasicForm = () => {
       {errors.confirmPassword && <p>{errors.confirmPassword.message}</p>}
       <button
         type='submit'
+        disabled={!isValid}
         className='bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition-colors'
       >
         Enviar
