@@ -59,7 +59,8 @@ export const BasicForm = () => {
       <button
         type='submit'
         disabled={!isValid}
-        className='bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition-colors'
+        className={`bg-blue-500 text-white py-3 rounded-lg transition-colors
+          ${isValid ? 'hover:bg-blue-600 cursor-pointer' : 'bg-gray-300 text-gray-500 cursor-not-allowed hover:bg-blue-500'}`}
       >
         Enviar
       </button>
