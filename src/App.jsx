@@ -13,21 +13,6 @@ const schema = yup.object({
     .required('El mensaje es obligatorio')
 })
 
-const initialState = {
-  messages: []
-}
-
-const chatReducer = (state, action) => { /* Estado actual y acción para modificarlo */
-  switch (action.type) {
-    case 'ADD_MESSAGE':
-      console.log('Agregando mensaje...')
-      console.log(state)
-      return { ...state, messages: [...state.messages, action.payload] }
-    default:
-      return state
-  }
-}
-
 export const App = () => {
   const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(schema)
@@ -35,26 +20,10 @@ export const App = () => {
   // Guarda la respuesta de llama2
   const [response, setResponse] = useState('')
   const [loading, setLoading] = useState(false)
-  const [state, dispatch] = useReducer(chatReducer, initialState)
 
   const handlePregunta = async (data) => {
     console.log(data)
     setLoading(true)
-    try {
-      const res = await axios.post('http://localhost:11434/api/generate', {
-        model: 'deepseek-r1:1.5b',
-        prompt: data.userInput,
-        stream: false
-      })
-      setResponse(res.data.response)
-      // dispatch para guardar y enviar al array
-      dispatch({ type: 'ADD_MESSAGE', payload: { frome: 'user', text: data.userInput } }) // dispatch para guardar elmensaje del usuario
-      dispatch({ type: 'ADD_MESSAGE', payload: { frome: 'bot', text: res.data.response } }) // dispatch para guardar la respuesta
-    } catch (error) {
-      console.error('error: ', error)
-    } finally {
-      setLoading(false)
-    }
   }
 
   return (
