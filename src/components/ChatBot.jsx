@@ -4,6 +4,7 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { useContext } from 'react'
 import { ChatContext } from '../context/ChatContext'
 import { useOllama } from '../hooks/useOllama'
+import '../ChatBot.css'
 
 const schema = yup.object({
   userInput: yup
@@ -36,32 +37,28 @@ export const ChatBot = () => {
 
   return (
     <>
-      <form
-        onSubmit={handleSubmit(handlePregunta)}
-        className='bg-blue-100 max-w-md mx-auto mt-10 p-6 rounded-2xl shadow-md flex flex-col gap-4'
-      >
-        <input
-          type='text'
-          {...register('userInput')}
-          className='p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400'
-        />
+      <div className='chat-container'>
+
+        <div className='chat-messages'>
+          {state.messages.map((msg, index) => (
+            <div
+              key={index}
+              className={`message ${msg.from === 'user' ? 'user' : 'bot'}`}
+            >
+              {msg.text}
+            </div>
+          ))}
+          {state.loading && <p className='loading'>Generando respuesta 🚀</p>}
+        </div>
+        <form onSubmit={handleSubmit(handlePregunta)}>
+          <input
+            type='text'
+            {...register('userInput')}
+            placeholder='Escribe tu mensaje...'
+          />
+          <button type='submit'>Preguntar</button>
+        </form>
         {errors.userInput && <p>{errors.userInput.message}</p>}
-        <button
-          className='bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition-colors'
-        >Preguntar
-        </button>
-      </form>
-      {/* <div>
-        <p>{loading ? 'Generando respuesta 🚀' : response}</p>
-      </div> */}
-      <div>
-        {state.messages.map((msg, index) => (
-          <p key={index}>
-            <strong>{msg.from === 'user' ? 'Tú' : 'Bot'}:</strong>
-            {msg.text}
-          </p>
-        ))}
-        {state.loading && <p>Generando respuesta 🚀</p>}
       </div>
     </>
   )
