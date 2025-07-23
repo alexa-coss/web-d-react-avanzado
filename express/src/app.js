@@ -48,6 +48,17 @@ app.get('/api/peliculas/comedia/:pais', (req, res) => {
 
 app.get('/api/peliculas/accion/titulo/year/:year')
 
+app.use(express.json())
+app.post('/api/peliculas', (req, res) => {
+  const nuevaPelicula = req.body
+
+  console.log(nuevaPelicula)
+  res.status(201).send({
+    mensaje: 'La película se recibió con éxito',
+    datos: nuevaPelicula
+  })
+})
+
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`)
 })
