@@ -11,6 +11,42 @@
       "text": "React express",
       "sender": "bot",
       "timestamp": "2025-07-30T02:25:59.688Z"
+    },
+    {
+      "id": 1754423908933,
+      "text": "Hola",
+      "sender": "user",
+      "timestamp": "2025-08-05T19:58:28.933Z"
+    },
+    {
+      "id": 1754425130283,
+      "text": "Que es React",
+      "sender": "user",
+      "timestamp": "2025-08-05T20:18:50.283Z"
+    },
+    {
+      "id": 1754427706614,
+      "text": "Hola",
+      "sender": "user",
+      "timestamp": "2025-08-05T21:01:46.614Z"
+    },
+    {
+      "id": 1754427768589,
+      "text": "<think>\n\n</think>\n\n¡Hola! ¿En qué puedo ayudarte hoy? 😊",
+      "sender": "bot",
+      "timestamp": "2025-08-05T21:02:48.589Z"
+    },
+    {
+      "id": 1754427884228,
+      "text": "¿Qué es React?",
+      "sender": "user",
+      "timestamp": "2025-08-05T21:04:44.228Z"
+    },
+    {
+      "id": 1754427986083,
+      "text": "<think>\n\n</think>\n\n**React** es un framework de programación web que permite crear aplicaciones interactivas dinámicamente a partir de código. Fue desarrollado por Ron Andrés y others en 2013, como una变形 del framework Node.js con un entorno visual similar a HTML/JavaScript.\n\n### Características Principales de React:\n1. **Navegación Dinámica**: React permitirá crear elementos interactivos que se pueden navegar desde cualquier punto de la aplicación, sin necesidad de hacer clics en botones o selects.\n2. **Elementos Semi-Visuales**: Cada estructura dinámica (como tabs, secciones, gráficos) puede ser separada de su contenido y solo vea el texto al hacer clic.\n3. **Uso Sencillo del Lenguaje**: React es fácil de usar, con un lenguaje de programación simple que permitirá crear app modernas.\n4. **Interfaz Semi-VisUAL**: La interfaz de usuario (UI) se puede construir visualmente y se adapta a cualquier entorno de navegador.\n\n### Proporcionado por React:\n- **Elementos Basicos**: Tablas, selects, inputs, outers, etc.\n- **Manejo Dinámico de Elementos**: Elementos como tablerios o gráficos que se pueden creepar/crecer/Desacercarse en tiempo real.\n- **Interfaz Semi-Visual**: La UI es visual y easy de entender.\n\n### Creadores y Situciones:\n- **Ron Andrés** (y otros): Creó React con la fin de 2013, a los which crearon Node.js. En 2017, lo convertieron en un framework web orientado a las páginas.\n- **Situciones**: React tiene una comunidad amplia y puede ser usada en frameworks como Bootstrap, Zod, Next.js, Yarn, etc.\n\n**Recompendadas para React:**\n- Lógica clara del lenguaje.\n- Usar框架y paquetes de JavaScript.\n- Crear interacciones suaves con JavaScript.\n- Usar un entorno limpio ( como Jekyll o Create React App).\n\nSi necesitas más información sobre React, te recomiendo reviewede mostlyo en [repositorio](https://github.com/react/react) y [tutorials por examplees](https://react.dev/tutorials).",
+      "sender": "bot",
+      "timestamp": "2025-08-05T21:06:26.083Z"
     }
   ]
 }
