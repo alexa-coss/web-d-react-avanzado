@@ -70,7 +70,6 @@ Rama: parte-8 Descripción: Implementar Mongo como base de datos. Uso de dotenv:
 
 ## Comentarios
 
-Vimos un poco más de lo correspondiente al módulo y el proyecto final fue bastante completo, fue complejo, me llevó tiempo y esfuerzo, al final comprendí casi todo y me siento más segura al trabajar este tipo de proyectos.
 Fuimos trabajando cada vez con algo más complejo, pero al ya tener las bases de una clase anterior no fue tan difícil. Se puede complementar más el proyecto e incluso se puede escalar para que sea una aplicación más completa, de momento la dejo funcionando de manera sencilla.
 
 
